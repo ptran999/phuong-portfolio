@@ -59,6 +59,7 @@ Color Palette: #440d20, #592133, #89515d, #dfbcc6, #f7eaef, #333, #fff
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     width: 100%;
 }
 

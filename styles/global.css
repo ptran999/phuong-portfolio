@@ -1,0 +1,189 @@
+/*
+Title: global.css
+Author: Phuong Tran
+Date: 12/05/2023
+Description: Global Styling for portfolio website. 
+Source:  https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-animation 
+Color Palette: #440d20, #592133, #89515d, #dfbcc6, #f7eaef, #333, #fff,
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+:root {
+    --burgundy: #602234;
+    --black: #2f2f30;
+    --light-burgundy: #89515d;
+    --dusty-rose: #b995a1;
+    --soft-white: #f0ece2;
+    --white: #ffffff;
+    --grey: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: var(--soft-white);
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* styling for navbar */
+header {
+    background: var(--burgundy);
+    color: var(--white);
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: none;
+    position: relative;
+    z-index: 10;
+    top: 0 ;
+    left: 0;
+    right:0;
+}
+
+header a {
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a:hover {
+    color: var(--dusty-rose);
+    font-weight: bolder;
+}
+
+header  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header li {
+    align-items: center;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.mr-1 {
+    margin-right: 8px;
+
+}
+
+.mt-1 {
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.mt-devops {
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.py-5 {
+    padding-top: 5rem;
+ }
+
+.text-center {
+    text-align: center;
+}
+
+.current-color {
+    color: var(--dark-burgundy);
+}
+
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+/* styling for buttons */
+.btn,  button{
+    display: inline-block;
+    padding: 11px 20px;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-showcase {
+    margin-top: 1.5rem;
+}
+
+.btn-work, .btn-devops {
+    color: var(--dark-burgundy);
+    background-color: var(--soft-white);
+}
+
+.btn-work:hover, .btn-devops:hover {
+    border: 1px solid var(--medium-burgundy);
+    color: var(--soft-white);
+    background-color: var(--light-burgundy);
+}
+
+.btn-showcase,
+.btn-submit {
+    color: var(--white);
+    background: var(--burgundy);
+}
+
+.btn-showcase:hover,
+.btn-submit:hover {
+    color: var(--burgundy);
+    background: var(--white);
+}
+
+
+/* styling Footer */
+footer, #main-footer {
+    width: 100%;
+    background-color: var(--black);
+    padding-top: 30px;
+    text-align: center;
+    bottom: 0;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.links-container a {
+    padding-left: 4rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--dusty-rose);
+}
+
+.links-container span {
+    margin-right: 5px;
+}
+
+.copyright, .footer-content {
+  color: var(--white);
+  font-size: 14px;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,279 @@
+/*
+Title: site.css
+Author: Phuong Tran
+Date: 12/05/2023
+Description: Styling for portfolio website
+Source:  https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-animation 
+Color Palette: #440d20, #592133, #89515d, #dfbcc6, #f7eaef, #333, #fff
+*/
+
+#showcase {
+    background-image:  url(../images/orangecountybeach.webp) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+/* styling for header content */
+#showcase .header-content, 
+#about  .about-info {
+    display: grid;
+    justify-content: center;
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+}
+
+#showcase .header-content {
+    padding-top: 220px;
+}
+
+#showcase .header-content p {
+    padding-top: 30px;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: var(--white);
+}
+
+#showcase .header-inner {
+    margin-top: 50px; 
+}
+
+.current-color {
+    color: var(--dark-burgundy);
+    font-weight: 600;
+}
+
+.bold-text {
+    color: var(--burgundy);
+    text-shadow: 2px 2px rgba(0,0,0,0.3);
+}
+
+/* Styling for card dia-gram page */
+.all-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    padding-top: 12px;
+    padding-bottom: 50px;
+    width: 500px;
+    cursor: default;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--burgundy);
+    border-radius: 4px;
+    margin: 30px auto;
+    transition: all 0.3s ease;
+  }
+
+/* styling for section  */
+#about, #work {
+    padding-top: 50px;
+    padding-bottom: 5%;
+}
+
+#about .bio-content p {
+    padding-top: 30px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 70px;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    color: var(--medium-burgundy);
+    font-weight: 100;
+    text-transform: uppercase; 
+}
+      
+.bottom-line {
+    height: 2px;
+    width: 3rem;
+    background: #333;
+    opacity: 0.5;
+    display: block;
+    margin: 0 auto 1rem auto; 
+}
+
+/* About */
+#about {
+    background-color: var(--soft-white);
+}
+
+.bio-content {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--burgundy);
+    line-height: 200%;
+}
+
+/* Work */
+#work, #about {
+    background-color: var(--soft-white);
+    min-height: 100vh;
+}
+
+#work .section-title {
+    color: var(--burgundy);
+    margin-top: 20px;
+}
+
+#work .items {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1.8rem;
+    padding-top: 40px;
+    padding-bottom: 40px;
+ }
+ 
+/* animation for item in work part */
+#work .item {
+    background-color: var(--light-burgundy);
+    color: var(--light-burgundy);
+    overflow: hidden;
+    border-radius: 5px;
+    height: 260px;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, var(--light-burgundy) 50%, var(--white) 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+ }
+
+#work .item:hover {
+    background-position: 0 -100%;
+}
+
+#work .item-text-category {
+    padding-top: 3rem;
+    color: var(--medium-burgundy);
+    text-align: center;
+}
+
+#work .item-text-title {
+    color: var(--dark-burgundy);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* styling for resume-card */
+.card-resume {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+
+.all-card {
+    margin-bottom: 50px;
+}
+
+.resume-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}  
+
+#work h1 {
+    font-size: 30px;
+    color: var(--burgundy);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3); 
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#work h4 {
+    margin-bottom: 30px;
+}
+
+.resume-intro {
+    text-align: left;
+}
+
+.resume-title {
+   font-size: 25px;
+   font-style: italic;
+   font-weight: 400;
+   margin-bottom: 20px;
+   margin-left: 30px;
+   border-bottom: 3px solid var(--burgundy);
+   padding-bottom: 0;
+}
+
+.mt-left {
+    margin-left: 80px;
+}
+
+.small-text {
+    font-size: 15px;;
+}
+
+.links-container {
+    justify-content: center; 
+    align-items: center;
+}
+
+/* styling for devops page */
+#grid {
+    display: grid;
+    height: 500px;
+    width: 1100px;
+    padding-top: 30px;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-gap: 45px;   
+  }
+  
+  #item2 {
+
+    grid-column: 2 / 3;
+  }
+  
+  #item3 {
+    background-color: blue;
+    grid-column: 3 / 3;
+  }
+
+/* styling for author footer */
+
+#main-footer .footer-content a  {
+    font-size: 18px;
+    color: var(--dusty-rose);
+    margin-right: 15px;
+}
+#main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center; 
+}
+
+#main-footer .footer-content .social .fa {
+    margin-right: 1rem;
+    border: 2px var(--dusty-rose) solid;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0.5rem; 
+}
+
+#main-footer .footer-content .social .fa:hover {
+    background: var(--white); 
+    color: var(--dusty-rose);
+}
